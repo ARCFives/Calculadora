@@ -5,4 +5,6 @@ aritmético e utilize o botão calcular para obter o resultado. O resultado irá
 
 <p>Ao usar o botão <q>limpar</q>, você irá dar um reset na cálculadora.</p>
 
-<p>Ao calcular qualquer resultado, um botão chamado <q>Usar N°</q> irá aparecer. Com ele você pode utilizar o número da sua soma para calcular.
+<p>Ao calcular qualquer resultado, um botão chamado <q>Usar N°</q> irá aparecer. Com ele você pode utilizar o número da sua soma para calcular.</p>
+
+<p>Utilize a calculadora através desse link: <a href="https://arcfives.github.io/Calculadora-Simples/" target="_blank">Clique aqui!</a></p>
