@@ -3,22 +3,28 @@
 :root {
     --bg-color: #a5a58d;
     --bg-color2: #b7b7a4;
-    --line-green: #007200;
-    --black-hover: #333533;
-    --green-hover: #9ef01a;
-    --red-alert: #e63946;
+    --red: #e63946;
 
-    --text-color: #242423;
-    --text-white: #fefae0;
+    --green-dark: #015F43;
+    --green: #00875F;
+    --green-light: #00B37E;
+    --bg-darkmode: #09090A;
+    --bg-darkelement: #121214;
+    --bg-darkhover: #323238;
+    --title: #E1E1E6;
+    --text-dark: #C4C4CC;
 
     --font-padrao: 'Oswald', sans-serif;;
     font-size: 62.5%;
 }
 
+/* ########## Geral ########## */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -28,7 +34,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.6rem;
+}
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btnDark {
+    margin-bottom: 2rem;
+    padding: .8rem;
+    font-size: 1.4rem;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: var(--text-dark);
+    background-color: var(--bg-darkelement);
+    border: none;
+    border-radius: 1.6rem;
+    box-shadow: 0 .6rem var(--text-dark);
+    font-weight: 700;
+    font-family: var(--font-padrao);
+}
+
+#btnDark:hover {
+    background-color: var(--bg-darkhover);
+}
+
+#btnDark:active {
+    background-color: var(--bg-darkhover);
+    box-shadow: 0 .2rem var(--bg-darkhover);
+    transform: translateY(4px);
 }
 
 .base {
@@ -42,7 +80,7 @@ body {
 
 .base h1 {
     text-align: center;
-    color: var(--text-color);
+    color: var(--bg-darkelement);
     margin-bottom: 2rem;
     font-size: 3rem;
 }
@@ -53,45 +91,34 @@ body {
     margin-bottom: 3rem;
 }
 
-.base .calculo input {
-    height: 2.5rem;
-    width: 20rem;
-    padding: 0.5rem;
-    border: 1px solid var(--text-color);
+.base .calculo input, .selesoma {
+    background-color: var(--bg-darkelement);
+    border: 1px solid var(--bg-darkelement);
     border-radius: .3rem;
-    background-color: var(--text-color);
-    color: var(--text-white);
+    color: var(--text-dark);
     font-size: 1.6rem;
     font-weight: 700;
     font-family: var(--font-padrao);
-    transition: .2s;
+}
+
+.base .calculo input {
+    height: 2.6rem;
+    width: 20rem;
+    padding: 0.5rem;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
 }
 
 .base .calculo input:focus-visible {
-    outline: 2px outset var(--line-green);
-}
-
-.base .calculo input:hover{
-    transform: scale(1.1);
+    outline: 2px outset var(--green);
 }
 
 .base .calculo .selesoma {
     cursor: pointer;
     width: 5rem;
-    border: 1px solid var(--text-color);
-    border-radius: .3rem;
-    font-size: 1.6rem;
-    font-weight: 700;
-    font-family: var(--font-padrao);
-    color: var(--text-white);
-    background-color: var(--text-color);
-    transition: .2s;
 }
 
-.base .calculo .selesoma:hover {
-    background-color: var(--black-hover);
-    transform: scale(1.2);
-}
+/* ########## Resultado e Botões ########## */
 
 .base .resultado {
     display: flex;
@@ -105,73 +132,112 @@ body {
     border: none;
     border-radius: .3rem;
     padding: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-family: var(--font-padrao);
-    transition: .2s;
+    transition: .3s;
 }
 
 .base .resultado .btnC {
-    color: var(--text-white);
-    background-color: var(--line-green);
+    color: var(--title);
+    background-color: var(--green-dark);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .base .resultado .btnC:hover{
-    background-color: var(--green-hover);
+    background-color: var(--green);
     transform: scale(1.1);
 }
 
 .base .resultado .btnR {
-    color: var(--red-alert);
-    background-color: var(--text-color);
+    color: var(--red);
+    background-color: var(--bg-darkelement);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .base .resultado .btnR:hover {
-    background-color: var(--black-hover);
-    color: var(--text-white);
+    background-color: var(--bg-darkhover);
     transform: scale(1.1);
 }
 
 .base .resultado .btnN {
-    color: var(--text-white);
-    background-color: var(--line-green);
+    display: none;
+    color: var(--title);
+    background-color: var(--green-dark);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .base .resultado .btnN:hover{
-    background-color: var(--green-hover);
+    background-color: var(--green);
     transform: scale(1.1);
 }
 
-.base .resultvalor {
+.base .resultvalor p{
     text-align: center;
-    color: var(--text-color);
+    color: var(--bg-darkelement);
     font-size: 2rem;
 }
 
-.autor {
-    text-align: center;
-    font-size: 1.6rem;
-    color: var(--text-color);
-}
+/* ########## Footer ########## */
 
-.autor a {
-    text-decoration: none;
-    color: var(--text-color);
-    transition: .2s;
+footer, a {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--bg-darkelement);
+    transition: .4s;
 }
 
 .autor a:hover {
-    color: var(--line-green);
+    color: var(--green-dark);
+    text-decoration: underline;
 }
 
-.ativo {
-    display: block;
+/* ########## Dark Mode ########## */
+
+body.darkmode {
+    background-color: var(--bg-darkmode);
 }
 
-.desativado {
-    display: none;
+.base.darkmode {
+    background-color: var(--bg-darkelement);
+}
+
+.base h1.darkmode {
+    color: var(--title);
+}
+
+.base .calculo input.darkmode, .selesoma.darkmode {
+    background-color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+    color: var(--bg-darkelement);
+}
+
+.base .resultvalor p.darkmode {
+    color: var(--title);
+}
+
+.base .resultado .btnR.darkmode {
+    background-color: var(--bg-darkhover);
+}
+
+.base .resultado .btnR.darkmode:hover {
+    filter: brightness(1.3);
+}
+
+#btnDark.darkmode {
+    color: var(--bg-darkelement);
+    background-color: var(--text-dark); 
+}
+
+#btnDark.darkmode:active {
+    box-shadow: 0 .2rem var(--bg-darkelement);
+}
+
+.autor.darkmode {
+    color: var(--text-dark);
+}
+
+a.darkmode {
+    color: var(--text-dark);
 }
 
 @media (max-width: 810px) {

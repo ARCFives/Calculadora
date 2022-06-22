@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gustavo Vieira">
     <title>Calculadora Simples</title>
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
@@ -12,23 +13,24 @@
     <link rel="manifest" href="imgs/site.webmanifest">
 </head>
 <body>
-    <main>    
-            <div class="base">
-                <h1>Calculadora Simples</h1>
+    <main>   
+            <button id="btnDark">Dark mode</button> 
+            <div class="base" id="base">
+                <h1 id="title">Calculadora Simples</h1>
                 <div class="calculo">
-                    <input type="number" id="num1" class="num1" placeholder="Digite o valor" autofocus title="Insira um valor">
+                    <input type="number" id="num1" placeholder="Digite um valor" autofocus title="Insira um valor">
                     <select id="selesoma" class="selesoma" title="Escolha um operador aritmético">
                         <option value="soma">+</option>
                         <option value="divs">/</option>
                         <option value="menor">-</option>
                         <option value="multi">*</option>
                     </select>
-                    <input type="number" id="num2" class="num2" placeholder="Digite o valor" title="Insira um segundo valor">
+                    <input type="number" id="num2" placeholder="Digite um valor" title="Insira um segundo valor">
                 </div>
                 <div class="resultado">
                     <input type="button" value="Calcular" class="btnC" id="btnC">
                     <input type="button" value="Limpar" class="btnR" id="btnR" title="Limpar todos os valores.">
-                    <input type="button" value="Usar N°" class="btnN desativado" id="btnN" title="Usar número da conta." > 
+                    <input type="button" value="Usar N°" class="btnN" id="btnN" title="Usar número da conta." > 
                 </div>
                 <div class="resultvalor">
                     <p id="total"></p>
