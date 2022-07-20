@@ -8,11 +8,12 @@
     --green-dark: #015F43;
     --green: #00875F;
     --green-light: #00B37E;
-    --bg-darkmode: #09090A;
-    --bg-darkelement: #121214;
-    --bg-darkhover: #323238;
-    --title: #E1E1E6;
-    --text-dark: #C4C4CC;
+    --bg-darkmode: #100f10;
+    --bg-darkelement: #1b1b1b;
+    --bg-darkhover: #242424;
+    --white: #fafafa;
+    --text-white: rgba(255, 255, 255, 0.96);
+    --text-hover: rgba(rgba(255, 255, 255, 0.45));
 
     --font-padrao: 'Oswald', sans-serif;;
     font-size: 62.5%;
@@ -25,12 +26,12 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: var(--font-padrao);
 }
 
 body {
     height: 100vh;
     background-color: var(--bg-color);
-    font-family: var(--font-padrao);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,13 +51,12 @@ main {
     text-align: center;
     cursor: pointer;
     outline: none;
-    color: var(--text-dark);
+    color: var(--text-white);
     background-color: var(--bg-darkelement);
     border: none;
     border-radius: 1.6rem;
     box-shadow: 0 .6rem var(--text-dark);
     font-weight: 700;
-    font-family: var(--font-padrao);
 }
 
 #btnDark:hover {
@@ -92,13 +92,12 @@ main {
 }
 
 .base .calculo input, .selesoma {
-    background-color: var(--bg-darkelement);
-    border: 1px solid var(--bg-darkelement);
+    background-color: var(--text-white);
+    border: 1px solid var(--text-white);
     border-radius: .3rem;
-    color: var(--text-dark);
+    color: var(--text-hover);
     font-size: 1.6rem;
     font-weight: 700;
-    font-family: var(--font-padrao);
 }
 
 .base .calculo input {
@@ -133,12 +132,11 @@ main {
     border-radius: .3rem;
     padding: .5rem;
     font-size: 1.6rem;
-    font-family: var(--font-padrao);
     transition: .3s;
 }
 
 .base .resultado .btnC {
-    color: var(--title);
+    color: var(--text-white);
     background-color: var(--green-dark);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -161,7 +159,7 @@ main {
 
 .base .resultado .btnN {
     display: none;
-    color: var(--title);
+    color: var(--text-white);
     background-color: var(--green-dark);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -202,17 +200,16 @@ body.darkmode {
 }
 
 .base h1.darkmode {
-    color: var(--title);
+    color: var(--text-white);
 }
 
 .base .calculo input.darkmode, .selesoma.darkmode {
-    background-color: var(--text-dark);
     border: 1px solid var(--text-dark);
     color: var(--bg-darkelement);
 }
 
 .base .resultvalor p.darkmode {
-    color: var(--title);
+    color: var(--text-white);
 }
 
 .base .resultado .btnR.darkmode {
@@ -225,7 +222,7 @@ body.darkmode {
 
 #btnDark.darkmode {
     color: var(--bg-darkelement);
-    background-color: var(--text-dark); 
+    background-color: var(--text-white); 
 }
 
 #btnDark.darkmode:active {
@@ -233,11 +230,11 @@ body.darkmode {
 }
 
 .autor.darkmode {
-    color: var(--text-dark);
+    color: var(--text-white);
 }
 
 a.darkmode {
-    color: var(--text-dark);
+    color: var(--text-white);
 }
 
 @media (max-width: 810px) {
