@@ -1,52 +1,53 @@
-const text = document.getElementById('total')
-let modedark
-let toggleTheme = true
-let change = document.querySelectorAll(
-  '#base, #title, #num1, #num2, #selesoma, #btnR, #total, .autor, a'
-)
+const numeros = document.querySelectorAll('.num')
+const display = document.querySelector('.display-number')
+const btnReset = document.querySelector('.reset')
+const result = document.querySelector('.result')
+const arithmetic = document.querySelectorAll('.ari')
+let soma = []
 
-btnDark.addEventListener('click', () => {
-  if (toggleTheme) {
-    btnDark.innerHTML = 'Light mode'
-  } else {
-    btnDark.innerHTML = 'Dark mode'
-  }
-  change.forEach(item => item.classList.toggle('darkmode'))
-  document.body.classList.toggle('darkmode')
-  toggleTheme = !toggleTheme
+numeros.forEach(num => {
+  num.addEventListener('click', (e) => {
+    const numrsValue = e.target.value
+    display.value += numrsValue
+  })
 })
 
-btnC.addEventListener('click', (cal1, cal2, expoent) => {
-  cal1 = Number(num1.value)
-  cal2 = Number(num2.value)
-  expoent = selesoma.value
+arithmetic.forEach(ari => {
+  ari.addEventListener('click', (expo) => {
+    
+    if(soma.length == ''){
+      if(display.value == ''){
+        return
+      }else{
+        soma.push(display.value)
+        display.value = ''
+        const expoent = expo.target.value
+        soma.push(expoent)
+      }
+    }else{
+      calculo()
+    }})})
 
-  if (cal1 == '' || cal2 == '') {
-    text.textContent = `Valores incorretos!`
+btnReset.addEventListener('click', () => {
+  display.value = ''
+  soma= []
+})
+
+result.addEventListener('click', () => {
+  calculo()
+})
+
+function calculo() {
+  if(display.value == ''){
+    if(soma.length == ''){
+      return
+    }
+  }else if(soma.length == ''){
     return
+  }else{
+    soma.push(display.value)
+    const resultado = eval(soma[0] + soma[1] + soma[2])
+    display.value = resultado
+    soma= []
   }
-
-  result = eval(cal1 + expoent + cal2)
-  text.textContent = `${result}`
-
-  if (result >= 1 || result <= -1) {
-    btnN.style.display = 'block'
-  } else {
-    btnN.style.display = 'none'
-  }
-})
-
-btnR.addEventListener('click', () => {
-  num1.value = ''
-  num2.value = ''
-  text.textContent = ''
-  num1.focus()
-  btnN.style.display = 'none'
-  result = 0
-})
-
-btnN.addEventListener('click', () => {
-  num1.value = result
-  num2.value = ''
-  num2.focus()
-})
+}

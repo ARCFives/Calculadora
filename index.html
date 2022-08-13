@@ -13,33 +13,43 @@
     <link rel="manifest" href="imgs/site.webmanifest">
 </head>
 <body>
-    <main>   
-            <button id="btnDark">Dark mode</button> 
-            <div class="base" id="base">
-                <h1 id="title">Calculadora Simples</h1>
-                <div class="calculo">
-                    <input type="number" id="num1" placeholder="Digite um valor" autofocus title="Insira um valor">
-                    <select id="selesoma" class="selesoma" title="Escolha um operador aritmético">
-                        <option value="+">+</option>
-                        <option value="/">/</option>
-                        <option value="-">-</option>
-                        <option value="*">*</option>
-                    </select>
-                    <input type="number" id="num2" placeholder="Digite um valor" title="Insira um segundo valor">
-                </div>
-                <div class="resultado">
-                    <input type="button" value="Calcular" class="btnC" id="btnC">
-                    <input type="button" value="Limpar" class="btnR" id="btnR" title="Limpar todos os valores.">
-                    <input type="button" value="Usar N°" class="btnN" id="btnN" title="Usar número da conta." > 
-                </div>
-                <div class="resultvalor">
-                    <p id="total"></p>
-                </div>
-            </div>
-            <footer> 
-                <p class="autor"><em>Autor: <a href="https://github.com/ARCFives" target="_blank">Gustavo Vieira</a></em></p>
-            </footer>      
-    </main>
+    <div class="container">
+        <div class="display">
+          <input class="display-number" readonly>
+        </div>
+        <div class="btn-numbers">
+          <div class="btn-list">
+            <button class="btn reset">C</button>
+          </div>
+          <div class="btn-list">
+            <button value="7" class="btn num">7</button>
+            <button value="8" class="btn num">8</button>
+            <button value="9" class="btn num">9</button>
+            <button value="/" class="btn ari">/</button>
+          </div>
+          <div class="btn-list">
+            <button value="4" class="btn num">4</button>
+            <button value="5" class="btn num">5</button>
+            <button value="6" class="btn num">6</button>
+            <button value="*" class="btn ari">X</button>
+          </div>
+          <div class="btn-list">
+            <button value="1" class="btn num">1</button>
+            <button value="2" class="btn num">2</button>
+            <button value="3" class="btn num">3</button>
+            <button value="-" class="btn ari">-</button>
+          </div>
+          <div class="btn-list">
+            <button value="0" class="btn num">0</button>
+            <button value="." class="btn num">.</button>
+            <button value="=" class="btn result">=</button>
+            <button value="+" class="btn ari">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="version">
+        <p><strong>V</strong>3.0.0</p>
+      </div>
     <script src="scripts.js"></script>
 </body>
 </html>
