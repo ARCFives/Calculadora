@@ -102,7 +102,7 @@ body {
   background-color: var(--result-btn);
 }
 
-.result:hover {
+.result:active {
   background-color: var(--ari-buttons);
 }
 
