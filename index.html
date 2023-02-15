@@ -5,35 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Gustavo Vieira" />
-    <title>Calculadora Simples</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora</title>
+    <script src="https://kit.fontawesome.com/7adf1fbf24.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <link rel="stylesheet" href="./src/styles/theme.css">
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="imgs/apple-touch-icon.png"
+      href="./src/imgs/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="imgs/favicon-32x32.png"
+      href="./src/imgs/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="imgs/favicon-16x16.png"
+      href="./src/imgs/favicon-16x16.png"
     />
-    <link rel="manifest" href="imgs/site.webmanifest" />
+    <link rel="manifest" href="./src/imgs/site.webmanifest" />
   </head>
   <body>
-    <div class="container">
-      <div class="display">
-        <input class="display-number" readonly />
+    <div class="calculator">
+      <div class="calculator__display">
+        <input id="displayNumber" readonly />
       </div>
-      <div class="btn-numbers">
-        <div class="btn-list col-a">
-          <button class="btn reset">C</button>
+      <div class="calculator__operations">
+        <div class="operations__btn operations__btn-a ">
+          <button class="btn reset" id="btnReset">C</button>
           <button class="btn" id="btnDelete">
             <i class="fa-solid fa-delete-left"></i>
           </button>
@@ -59,18 +64,22 @@
         <div class="btn-list">
           <button value="0" class="btn num">0</button>
           <button value="." class="btn num">.</button>
-          <button value="=" class="btn result">=</button>
+          <button value="=" class="btn" id="btnResult">=</button>
           <button value="+" class="btn ari">+</button>
         </div>
       </div>
     </div>
-    <div class="version">
-      <p><strong>V</strong>3.1.2</p>
+    <div class="calculator__footer">
+      <div class="switch">
+        <div class="switch__box">
+          <img src="./src/imgs/sun.svg" alt="sun image">
+          <img src="./src/imgs/moon.svg" alt="moon image">
+        </div>
+        <div class="switch__select"></div>
+      </div>
+      <p><strong>V</strong>3.2.1</p>
     </div>
-    <script src="scripts.js"></script>
-    <script
-      src="https://kit.fontawesome.com/7adf1fbf24.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="./src/scripts/main.js"></script>
+    <script src="./src/scripts/theme.js"></script>
   </body>
 </html>

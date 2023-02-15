@@ -1,0 +1,34 @@
+.switch {
+  width: 7.2rem;
+  height: 3.2rem;
+  padding-inline: .5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 1px solid var(--bg-button);
+  position: relative;
+}
+
+.switch__box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.switch__select {
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 100%;
+  background-color: #fff;
+  border: .2rem solid var(--button-hover);
+  top: .3rem;
+  left: 4rem;
+  transition: all .3s;
+}
+
+.switch__select.light {
+  background-color: #888;
+  left: .4rem;
+}
